@@ -1,14 +1,13 @@
 import java.util.HashMap;
 
-class PhoneMap() {
-  HashMap<String, Phone> phones;
+class PhoneMap {
 
   PhoneMap() {
     phones = new HashMap<String, Phone>();
   }
 
   public void addPhone(Phone p) {
-    String k = p.getBrand() + p.getModel(), p);
+    String k = p.getBrand() + p.getModel();
   }
 
   public int getSize() {
@@ -23,11 +22,11 @@ class PhoneMap() {
 
   public PhoneList getCostOver(float price) {
     PhoneList temp = new PhoneList();
-    
+
     for (String phoneName : phones.keySet()) {
       Phone tempPhone = phones.get(phoneName);
-      
-      if (tempPhone.getApprox_Price_EUR() >price) {
+
+      if (tempPhone.getApprox_Price_EUR() > price) {
         PhoneList.addPhone(phones.get(phoneName));
       }
     }
